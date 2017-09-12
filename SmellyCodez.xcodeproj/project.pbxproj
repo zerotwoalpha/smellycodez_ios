@@ -12,9 +12,14 @@
 		7DDF089B1F5E498200E5CBDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DDF08991F5E498200E5CBDC /* Main.storyboard */; };
 		7DDF089D1F5E498200E5CBDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DDF089C1F5E498200E5CBDC /* Assets.xcassets */; };
 		7DDF08A01F5E498200E5CBDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DDF089E1F5E498200E5CBDC /* LaunchScreen.storyboard */; };
+		7DDF08A81F5E4B4B00E5CBDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DDF08A71F5E4B4B00E5CBDC /* GoogleService-Info.plist */; };
+		7DDF08AB1F5E4C6B00E5CBDC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDF08A91F5E4C6B00E5CBDC /* FeedViewController.swift */; };
+		7DDF08AC1F5E4C6B00E5CBDC /* FeedCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDF08AA1F5E4C6B00E5CBDC /* FeedCardCell.swift */; };
+		DCD97327A1C28F3961D4EADD /* Pods_SmellyCodez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542878218706A75D551C226F /* Pods_SmellyCodez.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		542878218706A75D551C226F /* Pods_SmellyCodez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmellyCodez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDF08921F5E498200E5CBDC /* SmellyCodez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmellyCodez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDF08951F5E498200E5CBDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DDF08971F5E498200E5CBDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,12 @@
 		7DDF089C1F5E498200E5CBDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DDF089F1F5E498200E5CBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DDF08A11F5E498200E5CBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DDF08A71F5E4B4B00E5CBDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7DDF08A91F5E4C6B00E5CBDC /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		7DDF08AA1F5E4C6B00E5CBDC /* FeedCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCardCell.swift; sourceTree = "<group>"; };
+		7DDF7E3C1F66262C00B5A2C2 /* SmellyCodez.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmellyCodez.entitlements; sourceTree = "<group>"; };
+		8EAEFC8CA43260336193417D /* Pods-SmellyCodez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmellyCodez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmellyCodez/Pods-SmellyCodez.debug.xcconfig"; sourceTree = "<group>"; };
+		E562C80ED435C59ECF38CED7 /* Pods-SmellyCodez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmellyCodez.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmellyCodez/Pods-SmellyCodez.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD97327A1C28F3961D4EADD /* Pods_SmellyCodez.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B1F015A21813FEA0F9EE925 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8EAEFC8CA43260336193417D /* Pods-SmellyCodez.debug.xcconfig */,
+				E562C80ED435C59ECF38CED7 /* Pods-SmellyCodez.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		78C4ED946DBC120320EEB431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				542878218706A75D551C226F /* Pods_SmellyCodez.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DDF08891F5E498200E5CBDC = {
 			isa = PBXGroup;
 			children = (
 				7DDF08941F5E498200E5CBDC /* SmellyCodez */,
 				7DDF08931F5E498200E5CBDC /* Products */,
+				5B1F015A21813FEA0F9EE925 /* Pods */,
+				78C4ED946DBC120320EEB431 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +85,10 @@
 		7DDF08941F5E498200E5CBDC /* SmellyCodez */ = {
 			isa = PBXGroup;
 			children = (
+				7DDF7E3C1F66262C00B5A2C2 /* SmellyCodez.entitlements */,
+				7DDF08A91F5E4C6B00E5CBDC /* FeedViewController.swift */,
+				7DDF08AA1F5E4C6B00E5CBDC /* FeedCardCell.swift */,
+				7DDF08A71F5E4B4B00E5CBDC /* GoogleService-Info.plist */,
 				7DDF08951F5E498200E5CBDC /* AppDelegate.swift */,
 				7DDF08971F5E498200E5CBDC /* ViewController.swift */,
 				7DDF08991F5E498200E5CBDC /* Main.storyboard */,
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DDF08A41F5E498200E5CBDC /* Build configuration list for PBXNativeTarget "SmellyCodez" */;
 			buildPhases = (
+				A5A65CB28D81B8F98BF83184 /* [CP] Check Pods Manifest.lock */,
 				7DDF088E1F5E498200E5CBDC /* Sources */,
 				7DDF088F1F5E498200E5CBDC /* Frameworks */,
 				7DDF08901F5E498200E5CBDC /* Resources */,
+				C9E9E5CC4EDBA25B246F94C6 /* [CP] Embed Pods Frameworks */,
+				F60EE533A408BE6B5B873E3E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -98,6 +136,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = T2X2SBY976;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDF08A01F5E498200E5CBDC /* LaunchScreen.storyboard in Resources */,
+				7DDF08A81F5E4B4B00E5CBDC /* GoogleService-Info.plist in Resources */,
 				7DDF089D1F5E498200E5CBDC /* Assets.xcassets in Resources */,
 				7DDF089B1F5E498200E5CBDC /* Main.storyboard in Resources */,
 			);
@@ -132,13 +176,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A5A65CB28D81B8F98BF83184 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmellyCodez-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9E9E5CC4EDBA25B246F94C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmellyCodez/Pods-SmellyCodez-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmellyCodez/Pods-SmellyCodez-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F60EE533A408BE6B5B873E3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmellyCodez/Pods-SmellyCodez-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmellyCodez/Pods-SmellyCodez-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7DDF088E1F5E498200E5CBDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7DDF08981F5E498200E5CBDC /* ViewController.swift in Sources */,
+				7DDF08AB1F5E4C6B00E5CBDC /* FeedViewController.swift in Sources */,
 				7DDF08961F5E498200E5CBDC /* AppDelegate.swift in Sources */,
+				7DDF08AC1F5E4C6B00E5CBDC /* FeedCardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -248,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -259,12 +378,14 @@
 		};
 		7DDF08A51F5E498200E5CBDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EAEFC8CA43260336193417D /* Pods-SmellyCodez.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmellyCodez/SmellyCodez.entitlements;
 				DEVELOPMENT_TEAM = T2X2SBY976;
 				INFOPLIST_FILE = SmellyCodez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zerotwoalpha.SmellyCodez;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zerotwoalpha.smellycodez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,12 +393,14 @@
 		};
 		7DDF08A61F5E498200E5CBDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E562C80ED435C59ECF38CED7 /* Pods-SmellyCodez.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmellyCodez/SmellyCodez.entitlements;
 				DEVELOPMENT_TEAM = T2X2SBY976;
 				INFOPLIST_FILE = SmellyCodez/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zerotwoalpha.SmellyCodez;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zerotwoalpha.smellycodez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -302,6 +425,7 @@
 				7DDF08A61F5E498200E5CBDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
