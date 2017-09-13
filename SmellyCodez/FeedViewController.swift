@@ -71,6 +71,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     ])
                 
                 Analytics.logEvent("posted", parameters: nil)
+                Analytics.setUserProperty("true", forName: "poster")
+                
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -98,28 +100,57 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func loadItems() {
         
-        self.currentPage += 1
+        ref = Database.database().reference().child("posts")
         
-        if (ref != nil) {
-            ref!.removeAllObservers()
-        }
-        
-        ref = Database.database().reference().child("posts").queryOrderedByKey().queryLimited(toLast: UInt(self.currentPage * self.itemsPerPage))
-        ref!.observe(.childAdded, with: { (snapshot) -> Void in
-            if self.items.index(where: { $0.key == snapshot.key }) == nil {
-                self.items.insert(snapshot, at: 0)
-                self.items.sort(by: { $0.key > $1.key})
-                if let index = self.items.index(where: { $0.key == snapshot.key }) {
-                    self.tableView.insertRows(at: [IndexPath(row: index, section: 0)], with: UITableViewRowAnimation.automatic)
-                }
+        ref!.observe(.value, with: { (snapshot) -> Void in
+//            self.items.removeAll()
+            for item in snapshot.children.allObjects as! [DataSnapshot] {
+                self.items.insert(item, at: 0)
             }
+            self.tableView.reloadData()
         })
+        
+//        ref!.observeSingleEvent(of: .value, with: { (snapshot) in
+//            for item in snapshot.children.allObjects as! [DataSnapshot] {
+//                self.items.insert(item, at: 0)
+//            }
+//            self.tableView.reloadData()
+//        })
+
+        
+//        ref!.observe(.childAdded, with: { (snapshot) -> Void in
+//            self.items.insert(snapshot, at: 0)
+//            self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.automatic)
+//        })
+
+        
+        
+//        self.currentPage += 1
+//        
+//        if (ref != nil) {
+//            ref!.removeAllObservers()
+//        }
+        
+        
+//        ref = Database.database().reference().child("posts").queryOrderedByKey().queryLimited(toLast: UInt(self.currentPage * self.itemsPerPage))        
+        
+//        ref!.observe(.childAdded, with: { (snapshot) -> Void in
+//            if self.items.index(where: { $0.key == snapshot.key }) == nil {
+//                self.items.insert(snapshot, at: 0)
+//                self.items.sort(by: { $0.key > $1.key})
+//                if let index = self.items.index(where: { $0.key == snapshot.key }) {
+//                    self.tableView.insertRows(at: [IndexPath(row: index, section: 0)], with: UITableViewRowAnimation.automatic)
+//                }
+//            }
+//        })
+        
         ref!.observe(.childChanged, with: {(snapshot) -> Void in
             if let index = self.items.index(where: { $0.key == snapshot.key }) {
                 self.items[index] = snapshot
                 self.tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: UITableViewRowAnimation.automatic)
             }
         })
+        
         ref!.observe(.childRemoved, with: {(snapshot) -> Void in
             if let index = self.items.index(where: { $0.key == snapshot.key }) {
                 self.items.remove(at: index)
@@ -171,9 +202,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let snapshot:DataSnapshot = self.items[indexPath.row]
         cell.setSnapshot(snapshot: snapshot)
         
-        if (indexPath.row == (currentPage * itemsPerPage) - 1) {
-            loadItems()
-        }
+//        if (indexPath.row == (currentPage * itemsPerPage) - 1) {
+//            loadItems()
+//        }
         
         return cell
     }

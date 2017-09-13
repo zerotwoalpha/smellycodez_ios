@@ -28,9 +28,9 @@ class FeedCardCell: UITableViewCell {
                 Database.database().reference().child("ohshits").child(currentUser.uid).child(snapshot.key).runTransactionBlock({ (currentData) -> TransactionResult in
                     let currentValue = currentData.value as? Bool ?? false
                     if (currentValue) {
-                        Database.database().reference().child("posts").child(snapshot.key).child("ohShitsCount").runTransactionBlock({ (currentData) -> TransactionResult in
-                            currentData.value = (currentData.value as? Int ?? 0) - 1
-                            return TransactionResult.success(withValue: currentData)
+                        Database.database().reference().child("posts").child(snapshot.key).child("ohShitsCount").runTransactionBlock({ (currentCountData) -> TransactionResult in
+                            currentCountData.value = (currentCountData.value as? Int ?? 0) - 1
+                            return TransactionResult.success(withValue: currentCountData)
                         })
                         currentData.value = false
                     }
@@ -42,9 +42,9 @@ class FeedCardCell: UITableViewCell {
                 Database.database().reference().child("ohshits").child(currentUser.uid).child(snapshot.key).runTransactionBlock({ (currentData) -> TransactionResult in
                     let currentValue = currentData.value as? Bool ?? false
                     if (!currentValue) {
-                        Database.database().reference().child("posts").child(snapshot.key).child("ohShitsCount").runTransactionBlock({ (currentData) -> TransactionResult in
-                            currentData.value = (currentData.value as? Int ?? 0) + 1
-                            return TransactionResult.success(withValue: currentData)
+                        Database.database().reference().child("posts").child(snapshot.key).child("ohShitsCount").runTransactionBlock({ (currentCountData) -> TransactionResult in
+                            currentCountData.value = (currentCountData.value as? Int ?? 0) + 1
+                            return TransactionResult.success(withValue: currentCountData)
                         })
                         currentData.value = true
                     }
